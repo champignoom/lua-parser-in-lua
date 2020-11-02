@@ -9,6 +9,7 @@ local function optstring(s, v)
 end
 
 local function luaY_parser()
+	-- lparser.c:luaY_parser
 	--[[
 	LClosure *luaY_parser (lua_State *L, ZIO *z, Mbuffer *buff,
 			       Dyndata *dyd, const char *name, int firstchar) {
@@ -40,6 +41,7 @@ local function luaY_parser()
 end
 
 local function f_parser()
+	-- ldo.c:f_parser
 	--[[
 	static void f_parser (lua_State *L, void *ud) {
 	  LClosure *cl;
@@ -60,8 +62,8 @@ local function f_parser()
 	error("Not Implemented")
 end
 
--- ldo.c:luaD_protectedparser
 local function luaD_protectedparser()
+	-- ldo.c:luaD_protectedparser
 	--[[
 	int luaD_protectedparser (lua_State *L, ZIO *z, const char *name,
 						const char *mode) {
@@ -85,8 +87,8 @@ local function luaD_protectedparser()
 	error("Not Implemented")
 end
 
--- lapi.c:lua_load
 local function lua_load(s, chunkname, mode)
+	-- lapi.c:lua_load
 	--[[
 	LUA_API int lua_load (lua_State *L, lua_Reader reader, void *data,
 			      const char *chunkname, const char *mode) {
